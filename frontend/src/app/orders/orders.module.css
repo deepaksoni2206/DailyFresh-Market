@@ -1,0 +1,39 @@
+.page { min-height: 100vh; background: #f6f9fc; color: #17243b; }
+.header { position: sticky; top: 0; z-index: 50; min-height: 78px; display: flex; align-items: center; justify-content: space-between; padding: 0 max(24px, calc((100% - 1284px) / 2)); border-bottom: 1px solid #e8ecef; background: #fff; box-shadow: none; }
+.brand { display: inline-flex; align-items: center; gap: 12px; color: #152238; font-family: var(--font-outfit), Arial, sans-serif; font-size: 21px; font-weight: 700; text-decoration: none; }
+.brand > span:last-child > span { color: #079b70; }
+.brandIcon { display: grid; width: 42px; height: 42px; place-items: center; border-radius: 13px; background: #079b70; color: #fff; font-size: 22px; }
+.continueLink { color: #079b70; font-size: 14px; font-weight: 700; text-decoration: none; }
+.headerActions { display: flex; align-items: center; gap: 18px; }
+.authLink { min-height: 38px; display: inline-flex; align-items: center; justify-content: center; padding: 0 14px; border: 0; border-radius: 8px; background: #07966d; box-shadow: none; color: #fff; cursor: pointer; font: inherit; font-size: 14px; font-weight: 700; text-decoration: none; }
+.authLink, .authLinkSecondary { gap: 7px; }
+.authLink svg, .authLinkSecondary svg { width: 17px; height: 17px; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+.authLinkSecondary { min-height: 38px; display: inline-flex; align-items: center; justify-content: center; padding: 0 12px; border: 1px solid #dce7e2; border-radius: 9px; background: #fff; color: #395348; font-size: 14px; font-weight: 700; text-decoration: none; }
+.content { width: min(calc(100% - 48px), 1284px); margin: 0 auto; padding: 36px 0 64px; }
+.titleRow { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 28px; }
+.eyebrow { margin: 0 0 4px; color: #079b70; font-size: 11px; font-weight: 800; letter-spacing: .12em; }
+.titleRow h1 { margin: 0; font-family: var(--font-outfit), Arial, sans-serif; font-size: 32px; }
+.orderCount { padding: 6px 14px; border-radius: 20px; background: #d3f7e7; color: #067a58; font-size: 12px; font-weight: 700; }
+.orderList { display: grid; gap: 18px; }
+.orderCard { overflow: hidden; border: 1px solid #e1e9f1; border-radius: 18px; background: #fff; box-shadow: 0 2px 8px rgb(15 23 42 / 4%); }
+.orderHeader { display: grid; grid-template-columns: .7fr 1fr 1fr .8fr; align-items: center; min-height: 82px; padding: 0 22px; border-bottom: 1px solid #edf2f5; background: #fbfdfc; }
+.orderHeader > div { display: grid; gap: 5px; }
+.orderHeader span { color: #8391a2; font-size: 11px; text-transform: uppercase; }
+.orderHeader strong { font-size: 14px; }
+.orderTotal { text-align: right; }
+.status { width: fit-content; padding: 5px 10px; border-radius: 20px; background: #fff0cf; color: #a26800; font-size: 12px !important; }
+.itemList { display: grid; }
+.item { display: grid; grid-template-columns: 72px minmax(0, 1fr) auto; align-items: center; gap: 16px; padding: 16px 22px; }
+.item + .item { border-top: 1px solid #edf2f5; }
+.productImage, .imagePlaceholder { width: 72px; height: 72px; border-radius: 12px; background: #eef7f3; object-fit: cover; }
+.imagePlaceholder { display: grid; place-items: center; font-size: 28px; }
+.productInfo { display: grid; gap: 5px; }
+.productInfo strong { font-size: 15px; }
+.productInfo span { color: #8290a1; font-size: 12px; }
+.itemPrice { font-size: 14px; }
+.emptyState { min-height: 340px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #e1e9f1; border-radius: 18px; background: #fff; text-align: center; }
+.emptyState h2 { margin: 12px 0 8px; }
+.emptyState p { margin: 0 0 20px; color: #8290a1; }
+.emptyIcon { display: grid; width: 72px; height: 72px; place-items: center; border-radius: 50%; background: #edf7f3; font-size: 30px; }
+.emptyButton { min-height: 46px; display: inline-flex; align-items: center; padding: 0 20px; border-radius: 10px; background: #079b70; color: #fff; font-weight: 700; text-decoration: none; }
+@media (max-width: 700px) { .header { padding: 0 16px; } .brand { font-size: 17px; } .brandIcon { width: 36px; height: 36px; } .content { width: calc(100% - 32px); } .orderHeader { grid-template-columns: 1fr 1fr; gap: 16px; padding: 16px; } .orderTotal { text-align: left; } .item { grid-template-columns: 60px minmax(0, 1fr) auto; padding: 14px 16px; } .productImage, .imagePlaceholder { width: 60px; height: 60px; } }

@@ -1,0 +1,49 @@
+.page { min-height: 100vh; background: #f6f9fc; color: #17243b; }
+.header { position: sticky; top: 0; z-index: 50; min-height: 78px; display: flex; align-items: center; justify-content: space-between; padding: 0 max(24px, calc((100% - 1120px) / 2)); border-bottom: 1px solid #e8ecef; background: #fff; }
+.brand { display: inline-flex; align-items: center; gap: 12px; color: #152238; font-family: var(--font-outfit), Arial, sans-serif; font-size: 21px; font-weight: 700; text-decoration: none; }
+.brand > span:last-child > span { color: #079b70; }
+.brandIcon { display: grid; width: 42px; height: 42px; place-items: center; border-radius: 13px; background: #079b70; color: #fff; font-size: 22px; }
+.headerActions { display: flex; align-items: center; gap: 18px; }
+.continueLink { color: #079b70; font-size: 14px; font-weight: 700; text-decoration: none; }
+.authLink { min-height: 38px; display: inline-flex; align-items: center; justify-content: center; padding: 0 14px; border: 0; border-radius: 8px; background: #07966d; color: #fff; cursor: pointer; font: inherit; font-size: 14px; font-weight: 700; text-decoration: none; }
+.content { width: min(calc(100% - 48px), 960px); margin: 0 auto; padding: 42px 0 72px; }
+.titleRow { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; margin-bottom: 26px; }
+.eyebrow { margin: 0 0 4px; color: #079b70; font-size: 11px; font-weight: 800; letter-spacing: .12em; }
+.titleRow h1 { margin: 0; font-family: var(--font-outfit), Arial, sans-serif; font-size: 32px; }
+.description { margin: 7px 0 0; color: #78889a; font-size: 14px; }
+.ordersLink { color: #07865f; font-size: 14px; font-weight: 700; text-decoration: none; white-space: nowrap; }
+.profileCard, .stateCard { border: 1px solid #e1e9f1; border-radius: 18px; background: #fff; box-shadow: 0 4px 16px rgb(15 23 42 / 4%); }
+.profileCard { padding: 28px 32px; }
+.cardHeading { display: flex; align-items: center; gap: 14px; padding-bottom: 23px; border-bottom: 1px solid #edf2f5; }
+.avatar { display: grid; width: 54px; height: 54px; place-items: center; border-radius: 16px; background: #e4f7ef; color: #07865f; font-family: var(--font-outfit), Arial, sans-serif; font-size: 22px; font-weight: 700; }
+.cardHeading h2 { margin: 0; font-size: 18px; }
+.cardHeading p { margin: 4px 0 0; color: #8391a2; font-size: 13px; }
+.fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 20px; padding: 25px 0; }
+.field { display: grid; gap: 8px; color: #445166; font-size: 13px; font-weight: 700; }
+.field input { width: 100%; min-height: 46px; padding: 0 13px; border: 1px solid #dfe7ed; border-radius: 9px; outline: none; background: #fff; color: #17243b; font: inherit; font-size: 14px; font-weight: 500; }
+.field input:focus { border-color: #079b70; box-shadow: 0 0 0 3px rgb(7 155 112 / 10%); }
+.field input[readonly] { background: #f6f8fa; color: #778596; cursor: not-allowed; }
+.field small { margin-top: -3px; color: #98a3b1; font-size: 11px; font-weight: 500; }
+.formFooter { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-top: 21px; border-top: 1px solid #edf2f5; }
+.formFooter p { margin: 0; color: #8290a1; font-size: 12px; line-height: 1.6; }
+.submitButton { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 0 19px; border: 0; border-radius: 9px; background: #079b70; color: #fff; cursor: pointer; font: inherit; font-size: 14px; font-weight: 700; text-decoration: none; white-space: nowrap; }
+.submitButton:hover { background: #087f5f; }
+.submitButton:disabled { cursor: wait; opacity: .7; }
+.error { margin: 0 0 16px; color: #b42318; font-size: 13px; }
+.notice { margin: 0 0 16px; color: #087f5f; font-size: 13px; }
+.stateCard { min-height: 280px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 28px; text-align: center; }
+.stateCard h2 { margin: 12px 0 20px; font-size: 17px; }
+.lockIcon { font-size: 30px; }
+@media (max-width: 640px) {
+  .header { min-height: 68px; padding: 0 16px; }
+  .brand { gap: 8px; font-size: 16px; }
+  .brandIcon { width: 36px; height: 36px; font-size: 19px; }
+  .headerActions { gap: 12px; }
+  .continueLink { font-size: 12px; }
+  .content { width: calc(100% - 32px); padding: 30px 0 48px; }
+  .titleRow { align-items: flex-start; }
+  .titleRow h1 { font-size: 28px; }
+  .profileCard { padding: 22px 18px; }
+  .fields { grid-template-columns: 1fr; gap: 17px; padding: 20px 0; }
+  .formFooter { align-items: stretch; flex-direction: column; }
+}

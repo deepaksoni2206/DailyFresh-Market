@@ -1,0 +1,39 @@
+:root {
+  color-scheme: light;
+  font-family: var(--font-jakarta), Arial, Helvetica, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color: #17243b;
+  background: #fbfcfe;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-outfit), Georgia, serif;
+}
+
+button,
+input {
+  font-family: inherit;
+}
