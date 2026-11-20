@@ -2,7 +2,7 @@
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
 User = get_user_model()
-from account.models import Profile
+from account.models import Profile, FullAddress
 
 class RegisterSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only = True)
@@ -70,4 +70,23 @@ class ProfileSerializer(serializers.ModelSerializer):
             ]
     
 
-    
+class FullAddressSerializer(serializers.ModelSerializer):
+     class Meta:
+          model = FullAddress
+          fields = [
+            "id",
+            "user",
+            "label",
+            "full_name",
+            "phone",
+            "address_line_1",
+            "address_line_2",
+            "city",
+            "state",
+            "postal_code",
+            "country",
+            "is_default",
+            "created_at",
+            "updated_at",
+        ]
+          read_only_fields = ["id", "user", "created_at", "updated_at"]

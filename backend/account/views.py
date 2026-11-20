@@ -7,8 +7,8 @@ from django.contrib.auth import authenticate
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.exceptions import TokenError
 from account.throttle import RegisterThrottle, LoginThrottle
-from .models import Profile
-from account.serailizers import ProfileSerializer
+from .models import Profile, FullAddress
+from account.serailizers import ProfileSerializer, FullAddressSerializer
 
 # Create your views here.
 
@@ -109,3 +109,25 @@ class ProfileViews(APIView):
         if serializer.is_valid(raise_exception= True):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class FullAddressView(APIView):
+
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        addresses = FullAddress.objects.filter(user=request.user)
+        serializer = FullAddressSerializer(addresses, many= True)
+        return Response({"Message":"Address List Feteched Successfully", 'data':serializer.data}, status= status.HTTP_200_OK)
+
+
+    def post(self, request):
+        serializer = FullAddressSerializer(data = request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save(user= request.user)
+        # Address table mein user ek required field hai—matlab bina bataye ki yeh address kis user ka hai, database save hi nahi hoga.
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    
+            
+
