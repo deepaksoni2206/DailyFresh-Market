@@ -1,0 +1,14 @@
+# Root Virtual Environment
+AriseEnv/
+venv/
+env/
+
+# Root Database & Environment Secrets
+*.sqlite3
+.env
+
+# OS and Editor generated files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
